@@ -55,7 +55,7 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$new_d_contains_value_y", New_dContainsValueY);
 
             //NUnit.Framework.Assert.True(false);
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
         }
 
         [PexMethod]
@@ -81,7 +81,7 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$old_d_contains_key_x", Old_dContainsKeyX);
             PexObserve.ValueForViewing("$new_d_contains_key_x", New_dContainsKeyX);
 
-            PexAssert.IsTrue(((New_x == Old_x && (!(New_dContainsKeyX))) && ((((New_Ret && New_dCount == Old_dCount - 1 && New_dCount != Old_dCount) && (((New_dCount == Old_x &&  Old_x != Old_dCount &&  New_x != Old_dCount &&  Old_x == New_dCount) && New_x == New_dCount) || ((Old_x != New_dCount &&  New_x != New_dCount) && (!(New_x == New_dCount))))) && Old_dContainsKeyX) || (((New_dCount == Old_dCount && (!(New_Ret))) && (((New_x == Old_dCount &&  Old_x == Old_dCount &&  Old_x == New_dCount) && New_x == New_dCount) || ((Old_x != Old_dCount &&  New_x != Old_dCount &&  Old_x != New_dCount &&  New_x != New_dCount) && (!(New_x == New_dCount))))) && (!(Old_dContainsKeyX))))));
+            Assert.IsTrue(((New_x == Old_x && (!(New_dContainsKeyX))) && ((((New_Ret && New_dCount == Old_dCount - 1 && New_dCount != Old_dCount) && (((New_dCount == Old_x &&  Old_x != Old_dCount &&  New_x != Old_dCount &&  Old_x == New_dCount) && New_x == New_dCount) || ((Old_x != New_dCount &&  New_x != New_dCount) && (!(New_x == New_dCount))))) && Old_dContainsKeyX) || (((New_dCount == Old_dCount && (!(New_Ret))) && (((New_x == Old_dCount &&  Old_x == Old_dCount &&  Old_x == New_dCount) && New_x == New_dCount) || ((Old_x != Old_dCount &&  New_x != Old_dCount &&  Old_x != New_dCount &&  New_x != New_dCount) && (!(New_x == New_dCount))))) && (!(Old_dContainsKeyX))))));
         }
 
         [PexMethod]
@@ -107,7 +107,7 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$old_d_contains_key_x", Old_dContainsKeyX);
             PexObserve.ValueForViewing("$new_d_contains_key_x", New_dContainsKeyX);
 
-            PexAssert.IsTrue((Old_dContainsKeyX && New_dContainsKeyX && New_dCount == Old_dCount && New_x == Old_x));
+            Assert.IsTrue((Old_dContainsKeyX && New_dContainsKeyX && New_dCount == Old_dCount && New_x == Old_x));
         }
 
         [PexMethod]
@@ -140,7 +140,7 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$old_d_contains_value_y", Old_dContainsValueY);
             PexObserve.ValueForViewing("$new_d_contains_value_y", New_dContainsValueY);
 
-            PexAssert.IsTrue(((New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y) && ((((New_dCount == Old_dCount) && (((New_y == Old_x &&  Old_y == Old_x &&  Old_y == New_x) && New_y == New_x) || ((Old_y != Old_x &&  New_y != Old_x &&  Old_y != New_x &&  New_y != New_x) && (!(New_y == New_x))))) && Old_dContainsKeyX) || (((New_dCount == Old_dCount + 1 && New_dCount != Old_dCount) && (((Old_y == Old_dCount &&  Old_y != New_dCount &&  New_y != New_dCount) && New_y == Old_dCount) || ((Old_y != Old_dCount &&  New_y != Old_dCount) && (!(New_y == Old_dCount))))) && (!(Old_dContainsKeyX))))));
+            Assert.IsTrue(((New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y) && ((((New_dCount == Old_dCount) && (((New_y == Old_x &&  Old_y == Old_x &&  Old_y == New_x) && New_y == New_x) || ((Old_y != Old_x &&  New_y != Old_x &&  Old_y != New_x &&  New_y != New_x) && (!(New_y == New_x))))) && Old_dContainsKeyX) || (((New_dCount == Old_dCount + 1 && New_dCount != Old_dCount) && (((Old_y == Old_dCount &&  Old_y != New_dCount &&  New_y != New_dCount) && New_y == Old_dCount) || ((Old_y != Old_dCount &&  New_y != Old_dCount) && (!(New_y == Old_dCount))))) && (!(Old_dContainsKeyX))))));
         }
 
         [PexMethod]
@@ -168,7 +168,7 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$old_d_contains_key_x", Old_dContainsKeyX);
             PexObserve.ValueForViewing("$new_d_contains_key_x", New_dContainsKeyX);
 
-            PexAssert.IsTrue(((New_dCount == Old_dCount && New_x == Old_x) && ((((New_Ret && Old_dContainsKeyX) && (((New_x == Old_dCount &&  Old_x == Old_dCount &&  Old_x == New_dCount) && New_x == New_dCount) || ((Old_x != Old_dCount &&  New_x != Old_dCount &&  Old_x != New_dCount &&  New_x != New_dCount) && (!(New_x == New_dCount))))) && New_dContainsKeyX) || ((((!(New_Ret)) && (!(Old_dContainsKeyX))) && (((New_x == Old_dCount &&  Old_x == Old_dCount &&  Old_x == New_dCount) && New_x == New_dCount) || ((Old_x != Old_dCount &&  New_x != Old_dCount &&  Old_x != New_dCount &&  New_x != New_dCount) && (!(New_x == New_dCount))))) && (!(New_dContainsKeyX))))));
+            Assert.IsTrue(((New_dCount == Old_dCount && New_x == Old_x) && ((((New_Ret && Old_dContainsKeyX) && (((New_x == Old_dCount &&  Old_x == Old_dCount &&  Old_x == New_dCount) && New_x == New_dCount) || ((Old_x != Old_dCount &&  New_x != Old_dCount &&  Old_x != New_dCount &&  New_x != New_dCount) && (!(New_x == New_dCount))))) && New_dContainsKeyX) || ((((!(New_Ret)) && (!(Old_dContainsKeyX))) && (((New_x == Old_dCount &&  Old_x == Old_dCount &&  Old_x == New_dCount) && New_x == New_dCount) || ((Old_x != Old_dCount &&  New_x != Old_dCount &&  Old_x != New_dCount &&  New_x != New_dCount) && (!(New_x == New_dCount))))) && (!(New_dContainsKeyX))))));
         }
 
         [PexMethod]
@@ -196,7 +196,7 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$old_d_contains_value_y", Old_dContainsValueY);
             PexObserve.ValueForViewing("$new_d_contains_value_y", New_dContainsValueY);
             
-            PexAssert.IsTrue(((New_dCount == Old_dCount && New_y == Old_y) && ((((New_Ret && Old_dContainsValueY) && (((New_y == Old_dCount &&  Old_y == Old_dCount &&  Old_y == New_dCount) && New_y == New_dCount) || ((Old_y != Old_dCount &&  New_y != Old_dCount &&  Old_y != New_dCount &&  New_y != New_dCount) && (!(New_y == New_dCount))))) && New_dContainsValueY) || ((((!(New_Ret)) && (!(Old_dContainsValueY))) && (((New_y == Old_dCount &&  Old_y == Old_dCount &&  Old_y == New_dCount) && New_y == New_dCount) || ((Old_y != Old_dCount &&  New_y != Old_dCount &&  Old_y != New_dCount &&  New_y != New_dCount) && (!(New_y == New_dCount))))) && (!(New_dContainsValueY))))));
+            Assert.IsTrue(((New_dCount == Old_dCount && New_y == Old_y) && ((((New_Ret && Old_dContainsValueY) && (((New_y == Old_dCount &&  Old_y == Old_dCount &&  Old_y == New_dCount) && New_y == New_dCount) || ((Old_y != Old_dCount &&  New_y != Old_dCount &&  Old_y != New_dCount &&  New_y != New_dCount) && (!(New_y == New_dCount))))) && New_dContainsValueY) || ((((!(New_Ret)) && (!(Old_dContainsValueY))) && (((New_y == Old_dCount &&  Old_y == Old_dCount &&  Old_y == New_dCount) && New_y == New_dCount) || ((Old_y != Old_dCount &&  New_y != Old_dCount &&  Old_y != New_dCount &&  New_y != New_dCount) && (!(New_y == New_dCount))))) && (!(New_dContainsValueY))))));
         }
         
         
@@ -221,7 +221,7 @@ namespace Dictionary.Test
             //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
 
-            PexAssert.IsTrue((New_dCount == Old_dCount && New_Ret == Old_dCount && New_Ret == New_dCount));
+            Assert.IsTrue((New_dCount == Old_dCount && New_Ret == Old_dCount && New_Ret == New_dCount));
         }
         
         /*[PexMethod]
@@ -229,7 +229,7 @@ namespace Dictionary.Test
         {
             bool hit = true;
             if (d.Count > 5)
-                PexAssert.IsTrue(false);
+                Assert.IsTrue(false);
 
             
         }
@@ -240,7 +240,7 @@ namespace Dictionary.Test
             bool hit = true;
             bool ret = d.ContainsValue(y);
             if (d.Count == y)
-                PexAssert.IsTrue(false);
+                Assert.IsTrue(false);
             return ret;
 
         }*/
