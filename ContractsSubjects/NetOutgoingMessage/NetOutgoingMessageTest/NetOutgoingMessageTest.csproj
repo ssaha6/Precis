@@ -56,7 +56,7 @@
       <HintPath>..\NetOutgoingMessage\bin\Windows\Debug\NetOutgoingMessage.dll</HintPath>
     </Reference>
     <Reference Include="PexAPIWrapper">
-      <HintPath>..\..\..\PexAPIWrapper\PexAPIWrapper\bin\Debug\PexAPIWrapper.dll</HintPath>
+      <HintPath>..\..\Common\PexAPIWrapper\bin\Debug\PexAPIWrapper.dll</HintPath>
     </Reference>
     <Reference Include="ReportParserLearning, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

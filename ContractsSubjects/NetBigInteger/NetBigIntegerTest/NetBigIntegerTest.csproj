@@ -55,8 +55,12 @@
     <Reference Include="NetBigInteger">
       <HintPath>..\NetBigInteger\bin\Windows\Debug\NetBigInteger.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="PexAPIWrapper">
-      <HintPath>..\..\..\PexAPIWrapper\PexAPIWrapper\bin\Debug\PexAPIWrapper.dll</HintPath>
+      <HintPath>..\..\Common\PexAPIWrapper\bin\Debug\PexAPIWrapper.dll</HintPath>
     </Reference>
     <Reference Include="ReportParserLearning, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -72,6 +76,9 @@
     <Compile Include="Factories\NetBigIntegerFactory.cs" />
     <Compile Include="Properties\Properties\AssemblyInfo.cs.cs" />
     <Compile Include="NetBigIntegerContractTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Condition="$(MSBuildToolsPath) != ''" Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Condition="$(MSBuildToolsPath) == ''" Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
