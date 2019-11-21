@@ -380,7 +380,15 @@ log
 
 ########################## Other ##########################
 z3/
-*.ps1
 *.txt
 information
 example.yaml
+*.sl
+
+Precis/results
+
+regression_results_DictionaryTest
+
+regression_results_QueueTest
+
+regression_results_StackTest

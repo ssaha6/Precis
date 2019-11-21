@@ -54,10 +54,36 @@ def learnPostUpToK(p, PUTName, outputFile, k, destinationOfTests):
         allBaseFeatureVectors.extend(baseFeatureVectors)
 
         if all(baseFeatureVectors[i].testLabel for i in range(0, len(baseFeatureVectors))):
-            print("found it")
+            print("found it\n************************\n")
             simplifiedPost = PrecisFormula(currentPostcondition.precisSimplify())
             return currentPostcondition, simplifiedPost, rounds, totalPexTime, totalLearningTime, len(allBaseFeatureVectors)
-
+            
+            # # Shambo: adding negetion checking
+        
+            # negPost = PrecisFormula(Not(currentPostcondition.formulaZ3))
+            
+            # inst = Instrumenter(
+            #     "MSBuild.exe", "./Instrumenter/Instrumenter/bin/Debug/Instrumenter.exe")
+            # inst.instrumentPost(p, negPost, PUTName)
+        
+            # negBaseFeatureVectors: List[FeatureVector] = pex.RunTeacher(p, PUTName, baseFeatures)
+                
+                
+            # if len(negBaseFeatureVectors) == 0:
+            #     print ( "truly found it")
+            #     simplifiedPost = PrecisFormula(currentPostcondition.precisSimplify())
+            #     return currentPostcondition, simplifiedPost, rounds, totalPexTime, totalLearningTime, len(allBaseFeatureVectors)
+            
+            # else:
+            #     print("fake found it")
+                
+            #     for i in range(0,len(negBaseFeatureVectors)):
+            #         negBaseFeatureVectors[i].testLabel = "True"
+                
+            #     baseFeatureVectors.extend(negBaseFeatureVectors)
+            #     allBaseFeatureVectors.extend(negBaseFeatureVectors)
+        
+        
         if rounds == 16:
             print("BAD!")
             simplifiedPost = PrecisFormula(currentPostcondition.precisSimplify())
@@ -70,6 +96,7 @@ def learnPostUpToK(p, PUTName, outputFile, k, destinationOfTests):
 
         intBaseFeatures, boolBaseFeatures = Featurizer.getIntAndBoolFeatures(baseFeatures)
         disLearner = DisjunctiveLearner(synthesizer)
+        
         logger1.info("#############\nRound: "+str(rounds)+"\n")
         # Learning function
         startLearningTime = time.time()
@@ -80,8 +107,12 @@ def learnPostUpToK(p, PUTName, outputFile, k, destinationOfTests):
         logger1.info("unsimplified post:\n"+ postcondition.toInfix()+"\n")
         
         print("unsimplified post "+ postcondition.toInfix())
-        print("")
         print("simplified post "+ PrecisFormula(postcondition.precisSimplify()).toInfix() )
+        
+        # Shambo
+        # Always insert simplified formula
+        postcondition = PrecisFormula(postcondition.precisSimplify())
+        
         # assumes ms build in path
         inst = Instrumenter(
             "MSBuild.exe", "./Instrumenter/Instrumenter/bin/Debug/Instrumenter.exe")
@@ -204,48 +235,13 @@ if __name__ == '__main__':
     stackPUTs = ['PUT_PushContract', 'PUT_PopContract',
                  'PUT_PeekContract', 'PUT_CountContract', 'PUT_ContainsContract']
     
-    stackPUTs = ['PUT_ContainsContract']
+    # stackPUTs = ['PUT_ContainsContract']
     p = Problem(sln, projectName, testDebugFolder, testDll,
                 testFileName, testNamepace, testClass,stackPUTs )
     
     subjects.append(p)
     #endregion of Stack
 
-    #region HashSet
-    sln = os.path.abspath('../ContractsSubjects/HashSet/HashSet.sln')
-    projectName = 'HashSetTest'
-    testDebugFolder = '../ContractsSubjects/HashSet/HashSetTest/bin/Debug/'
-    testDll = testDebugFolder + 'HashSetTest.dll'
-    testFileName = 'HashSetContractTest.cs'
-    testNamepace = 'HashSet.Test'
-    testClass = 'HashSetContractTest'
-    hashsetPUTs = ['PUT_AddContract', 'PUT_RemoveContract',
-                   'PUT_CountContract', 'PUT_ContainsContract']
-
-    
-
-    p1 = Problem(sln, projectName, testDebugFolder, testDll,
-                 testFileName, testNamepace, testClass, hashsetPUTs)
-    
-    subjects.append(p1)
-    #endregion of HashSet
-
-    #region Dictionary
-    sln = os.path.abspath('../ContractsSubjects/Dictionary/Dictionary.sln')
-    projectName = 'DictionaryTest'
-    testDebugFolder = '../ContractsSubjects/Dictionary/DictionaryTest/bin/Debug/'
-    testDll = testDebugFolder + 'DictionaryTest.dll'
-    testFileName = 'DictionaryContractTest.cs'
-    testNamepace = 'Dictionary.Test'
-    testClass = 'DictionaryContractTest'
-    dictionaryPUTs = ['PUT_AddContract', 'PUT_RemoveContract', 'PUT_GetContract', 'PUT_SetContract',
-                      'PUT_ContainsKeyContract', 'PUT_ContainsValueContract', 'PUT_CountContract']
-    
-    p2 = Problem(sln, projectName, testDebugFolder, testDll,
-                 testFileName, testNamepace, testClass,dictionaryPUTs)
-    
-    subjects.append(p2)
-    #endregion of Dictionary
 
     #region Queue
     sln = os.path.abspath('../ContractsSubjects/Queue/Queue.sln')
@@ -264,6 +260,43 @@ if __name__ == '__main__':
     subjects.append(p3)
     
     #endregion Queue
+    
+    
+    #region Dictionary
+    sln = os.path.abspath('../ContractsSubjects/Dictionary/Dictionary.sln')
+    projectName = 'DictionaryTest'
+    testDebugFolder = '../ContractsSubjects/Dictionary/DictionaryTest/bin/Debug/'
+    testDll = testDebugFolder + 'DictionaryTest.dll'
+    testFileName = 'DictionaryContractTest.cs'
+    testNamepace = 'Dictionary.Test'
+    testClass = 'DictionaryContractTest'
+    dictionaryPUTs = ['PUT_AddContract', 'PUT_RemoveContract', 'PUT_GetContract', 'PUT_SetContract',
+                      'PUT_ContainsKeyContract', 'PUT_ContainsValueContract', 'PUT_CountContract']
+    
+    p2 = Problem(sln, projectName, testDebugFolder, testDll,
+                 testFileName, testNamepace, testClass,dictionaryPUTs)
+    
+    subjects.append(p2)
+    #endregion of Dictionary
+    
+    
+    #region HashSet
+    sln = os.path.abspath('../ContractsSubjects/HashSet/HashSet.sln')
+    projectName = 'HashSetTest'
+    testDebugFolder = '../ContractsSubjects/HashSet/HashSetTest/bin/Debug/'
+    testDll = testDebugFolder + 'HashSetTest.dll'
+    testFileName = 'HashSetContractTest.cs'
+    testNamepace = 'HashSet.Test'
+    testClass = 'HashSetContractTest'
+    hashsetPUTs = ['PUT_AddContract', 'PUT_RemoveContract',
+                   'PUT_CountContract', 'PUT_ContainsContract']
+
+    p1 = Problem(sln, projectName, testDebugFolder, testDll,
+                 testFileName, testNamepace, testClass, hashsetPUTs)
+    
+    subjects.append(p1)
+    #endregion of HashSet
+
 
     #region ArrayList
     sln = os.path.abspath('../ContractsSubjects/ArrayList/ArrayList.sln')
@@ -341,10 +374,15 @@ if __name__ == '__main__':
             print(prob.projectName)
             print(prob.puts)
             # run all cases up to k
-            runLearnPost(prob, prob.puts, prob.projectName , outputFileType, 1)
+            
+            # Shambo
+            # Fixing upper value of K to 0 to perform always houdini
+            runLearnPost(prob, prob.puts, prob.projectName , outputFileType, 0)
+            
+            
             #runLearnPostTest(prob, prob.puts, prob.projectName , outputFileType, 2)
             
-            break
+            # break
             #Run one test and one case
             #break
             #learnPostUpToK(prob,prob.puts[0],outputFileType,1)

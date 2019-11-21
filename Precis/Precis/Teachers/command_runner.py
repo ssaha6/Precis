@@ -16,6 +16,7 @@ from lxml import etree
 def runCommand(args):
     try:
         executionOutput = ""
+        print("RUNNING COMMAND:", ''.join(args))
         executionRun = subprocess.Popen(args, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
         for line in executionRun.stdout:
             executionOutput += os.linesep + str(line.rstrip())

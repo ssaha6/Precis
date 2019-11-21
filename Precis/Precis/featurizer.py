@@ -53,7 +53,7 @@ class Featurizer:
         for bf in baseFeatureVectors:
             boolVal = ()
             intVal = ()
-            for fVal in bf:
+            for fVal in bf.valuesZ3:
                 #print(fVal)
                 if is_bool(fVal):
                     boolVal += (str(fVal),)

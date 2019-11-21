@@ -120,6 +120,7 @@ class Sygus:
         
         if regex:
             program  = regex.group(1)
+            print("SYGUS FEATURE:", program)
             return program
         elif result == '': # when calling solver with zero featureVectors
             print("SHOULD NOT BE HERE!")
