@@ -328,7 +328,8 @@ if __name__ == '__main__':
                     #'PUT_AddEdgeContract', 'PUT_RemoveEdgeContract', 'PUT_IsEdgesEmptyContract', 'PUT_EdgeCountContract', 'PUT_AdjacentDegreeContract',
                     #'PUT_IsAdjacentEdgesEmptyContract']
 
-    ugraphPUTs = ['PUT_AddEdgeContract', 'PUT_RemoveEdgeContract', 'PUT_IsEdgesEmptyContract', 'PUT_EdgeCountContract', 'PUT_AdjacentDegreeContract']
+    ugraphPUTs = ['PUT_AddEdgeContract', 'PUT_IsEdgesEmptyContract', 'PUT_EdgeCountContract', 'PUT_AdjacentDegreeContract']
+    # not working PUT_RemoveEdgeContract
     p5 = Problem(sln, projectName, testDebugFolder, testDll,
                  testFileName, testNamepace, testClass,ugraphPUTs)
     
