@@ -1,0 +1,477 @@
+Problem: HashSetTest
+
+PUT: PUT_AddContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_hsContainsX && New_x == Old_x && Old_x != New_hsCount && New_x != New_hsCount)
+
+unsimplified post:
+(New_hsContainsX && New_x == Old_x && Old_x != New_hsCount && New_x != New_hsCount)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_hsContainsX && New_x == Old_x)
+
+unsimplified post:
+(New_hsContainsX && New_x == Old_x)
+
+===== Final Result for PUT_AddContract
+
+postcondition k == 0
+((New_hsContainsX && New_x == Old_x))
+rounds: 3
+
+simplified post k == 0
+((New_hsContainsX && New_x == Old_x))
+pex time: 374.40423250198364
+
+learn time: 2.8742778301239014
+
+Samples: 22
+
+PUT: PUT_RemoveContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_x && (!(New_hsContainsX)))
+
+unsimplified post:
+(New_x == Old_x && (!(New_hsContainsX)))
+
+===== Final Result for PUT_RemoveContract
+
+postcondition k == 0
+((New_x == Old_x && (!(New_hsContainsX))))
+rounds: 2
+
+simplified post k == 0
+((New_x == Old_x && (!(New_hsContainsX))))
+pex time: 247.53724360466003
+
+learn time: 1.5004732608795166
+
+Samples: 17
+
+PUT: PUT_CountContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+unsimplified post:
+(New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+===== Final Result for PUT_CountContract
+
+postcondition k == 0
+((New_Ret == Old_hsCount && New_Ret == New_hsCount))
+rounds: 2
+
+simplified post k == 0
+((New_Ret == Old_hsCount && New_Ret == New_hsCount))
+pex time: 200.90038514137268
+
+learn time: 1.3692917823791504
+
+Samples: 8
+
+PUT: PUT_ContainsContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && New_x == Old_x)
+
+unsimplified post:
+(New_hsCount == Old_hsCount && New_x == Old_x)
+
+===== Final Result for PUT_ContainsContract
+
+postcondition k == 0
+((New_hsCount == Old_hsCount && New_x == Old_x))
+rounds: 2
+
+simplified post k == 0
+((New_hsCount == Old_hsCount && New_x == Old_x))
+pex time: 250.34502983093262
+
+learn time: 1.350996732711792
+
+Samples: 10
+
+Problem: ArrayListTest
+
+PUT: PUT_AddContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_arrListContainsX && New_arrListCount == Old_arrListCount + 1 && New_x == Old_x && New_arrListIndexOfX ==    Old_arrListCount -    Old_arrListLastIndexOfX -    Old_x -    Old_x -    1 && New_arrListLastIndexOfX == Old_arrListCount && New_Ret == Old_arrListCount && New_arrListCount != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_x != New_arrListCount && New_x != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_Ret != Old_arrListIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX && New_Ret != Old_arrListLastIndexOfX && New_Ret == New_arrListLastIndexOfX)
+
+unsimplified post:
+(New_arrListContainsX && New_arrListCount == Old_arrListCount + 1 && New_x == Old_x && New_arrListIndexOfX ==    Old_arrListCount -    Old_arrListLastIndexOfX -    Old_x -    Old_x -    1 && New_arrListLastIndexOfX == Old_arrListCount && New_Ret == Old_arrListCount && New_arrListCount != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_x != New_arrListCount && New_x != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_Ret != Old_arrListIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX && New_Ret != Old_arrListLastIndexOfX && New_Ret == New_arrListLastIndexOfX)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_arrListContainsX && New_arrListCount == Old_arrListCount + 1 && New_x == Old_x && New_arrListLastIndexOfX == Old_arrListCount && New_Ret == Old_arrListCount && New_arrListCount != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_x != New_arrListCount && New_x != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_Ret != Old_arrListIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX && New_Ret != Old_arrListLastIndexOfX && New_Ret == New_arrListLastIndexOfX)
+
+unsimplified post:
+(New_arrListContainsX && New_arrListCount == Old_arrListCount + 1 && New_x == Old_x && New_arrListLastIndexOfX == Old_arrListCount && New_Ret == Old_arrListCount && New_arrListCount != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_x != New_arrListCount && New_x != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_Ret != Old_arrListIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX && New_Ret != Old_arrListLastIndexOfX && New_Ret == New_arrListLastIndexOfX)
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=0 : (New_arrListContainsX && New_arrListCount == Old_arrListCount + 1 && New_x == Old_x && New_arrListLastIndexOfX == Old_arrListCount && New_Ret == Old_arrListCount && New_arrListCount != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_Ret != Old_arrListIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX && New_Ret != Old_arrListLastIndexOfX && New_Ret == New_arrListLastIndexOfX)
+
+unsimplified post:
+(New_arrListContainsX && New_arrListCount == Old_arrListCount + 1 && New_x == Old_x && New_arrListLastIndexOfX == Old_arrListCount && New_Ret == Old_arrListCount && New_arrListCount != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_Ret != Old_arrListIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX && New_Ret != Old_arrListLastIndexOfX && New_Ret == New_arrListLastIndexOfX)
+
+===== Final Result for PUT_AddContract
+
+postcondition k == 0
+((New_arrListContainsX && New_arrListCount == 1 + Old_arrListCount && New_x == Old_x && New_Ret == Old_arrListCount && (!(Old_arrListIndexOfX == New_arrListCount)) && (!(New_arrListIndexOfX == New_arrListCount)) && (!(Old_arrListLastIndexOfX == New_arrListCount)) && (!(New_Ret == Old_arrListIndexOfX)) && (!(New_Ret == Old_arrListLastIndexOfX)) && New_Ret == New_arrListLastIndexOfX))
+rounds: 4
+
+simplified post k == 0
+((New_arrListContainsX && New_arrListCount == 1 + Old_arrListCount && New_x == Old_x && New_Ret == Old_arrListCount && (!(Old_arrListIndexOfX == New_arrListCount)) && (!(New_arrListIndexOfX == New_arrListCount)) && (!(Old_arrListLastIndexOfX == New_arrListCount)) && (!(New_Ret == Old_arrListIndexOfX)) && (!(New_Ret == Old_arrListLastIndexOfX)) && New_Ret == New_arrListLastIndexOfX))
+pex time: 117.73809385299683
+
+learn time: 8.836211204528809
+
+Samples: 25
+
+PUT: PUT_RemoveContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_arrListCount ==    Old_arrListCount - Old_arrListIndexOfX - 1 && New_x == 0 && New_arrListIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && New_arrListLastIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_x == Old_x && New_arrListLastIndexOfX == New_arrListIndexOfX)
+
+unsimplified post:
+(New_arrListCount ==    Old_arrListCount - Old_arrListIndexOfX - 1 && New_x == 0 && New_arrListIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && New_arrListLastIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_x == Old_x && New_arrListLastIndexOfX == New_arrListIndexOfX)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_arrListCount ==    Old_arrListCount - Old_arrListIndexOfX - 1 && New_x == Old_x && New_arrListIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && New_arrListLastIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX == New_arrListIndexOfX)
+
+unsimplified post:
+(New_arrListCount ==    Old_arrListCount - Old_arrListIndexOfX - 1 && New_x == Old_x && New_arrListIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && New_arrListLastIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX == New_arrListIndexOfX)
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_x && New_arrListLastIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount)
+
+unsimplified post:
+(New_x == Old_x && New_arrListLastIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount)
+
+===== Final Result for PUT_RemoveContract
+
+postcondition k == 0
+((New_x == Old_x && New_arrListLastIndexOfX ==       -1 + Old_arrListLastIndexOfX + -1*Old_arrListIndexOfX && (!(Old_arrListIndexOfX == Old_arrListCount)) && (!(New_arrListIndexOfX == Old_arrListCount)) && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && (!(New_arrListLastIndexOfX == Old_arrListCount)) && (!(New_arrListIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount))))
+rounds: 4
+
+simplified post k == 0
+((New_x == Old_x && New_arrListLastIndexOfX ==       -1 + Old_arrListLastIndexOfX + -1*Old_arrListIndexOfX && (!(Old_arrListIndexOfX == Old_arrListCount)) && (!(New_arrListIndexOfX == Old_arrListCount)) && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && (!(New_arrListLastIndexOfX == Old_arrListCount)) && (!(New_arrListIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount))))
+pex time: 57.52059769630432
+
+learn time: 6.0621497631073
+
+Samples: 19
+
+PUT: PUT_InsertContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_arrListContainsX && New_arrListCount == Old_arrListCount + 1 && New_x == Old_x && New_index == Old_index && New_arrListCount != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_x != New_arrListCount && New_x != New_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != Old_index && Old_arrListLastIndexOfX != New_index && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX)
+
+unsimplified post:
+(New_arrListContainsX && New_arrListCount == Old_arrListCount + 1 && New_x == Old_x && New_index == Old_index && New_arrListCount != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_x != New_arrListCount && New_x != New_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != Old_index && Old_arrListLastIndexOfX != New_index && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_arrListContainsX && New_arrListCount == Old_arrListCount + 1 && New_x == Old_x && New_index == Old_index && New_arrListCount != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX)
+
+unsimplified post:
+(New_arrListContainsX && New_arrListCount == Old_arrListCount + 1 && New_x == Old_x && New_index == Old_index && New_arrListCount != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX)
+
+===== Final Result for PUT_InsertContract
+
+postcondition k == 0
+((New_arrListContainsX && New_arrListCount == 1 + Old_arrListCount && New_x == Old_x && New_index == Old_index && (!(Old_arrListIndexOfX == Old_arrListCount)) && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && (!(New_index == New_arrListCount)) && (!(Old_arrListIndexOfX == New_arrListCount)) && (!(New_arrListIndexOfX == New_arrListCount)) && (!(Old_arrListLastIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == Old_arrListIndexOfX)) && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX))))
+rounds: 3
+
+simplified post k == 0
+((New_arrListContainsX && New_arrListCount == 1 + Old_arrListCount && New_x == Old_x && New_index == Old_index && (!(Old_arrListIndexOfX == Old_arrListCount)) && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && (!(New_index == New_arrListCount)) && (!(Old_arrListIndexOfX == New_arrListCount)) && (!(New_arrListIndexOfX == New_arrListCount)) && (!(Old_arrListLastIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == Old_arrListIndexOfX)) && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX))))
+pex time: 63.02640986442566
+
+learn time: 5.396304130554199
+
+Samples: 17
+
+PUT: PUT_SetContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_arrListContainsX && New_arrListCount == Old_arrListCount && New_x == Old_x && New_index == 0 && New_arrListIndexOfX == 0 && New_arrListLastIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX && Old_index != Old_arrListCount && New_index != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_index == Old_index && New_arrListIndexOfX == Old_index && New_arrListIndexOfX == New_index)
+
+unsimplified post:
+(New_arrListContainsX && New_arrListCount == Old_arrListCount && New_x == Old_x && New_index == 0 && New_arrListIndexOfX == 0 && New_arrListLastIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX && Old_index != Old_arrListCount && New_index != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_index == Old_index && New_arrListIndexOfX == Old_index && New_arrListIndexOfX == New_index)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_arrListContainsX && New_arrListCount == Old_arrListCount && New_x == Old_x && New_index == Old_index && Old_index != Old_arrListCount && New_index != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount)
+
+unsimplified post:
+(New_arrListContainsX && New_arrListCount == Old_arrListCount && New_x == Old_x && New_index == Old_index && Old_index != Old_arrListCount && New_index != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount)
+
+===== Final Result for PUT_SetContract
+
+postcondition k == 0
+((New_arrListContainsX && New_arrListCount == Old_arrListCount && New_x == Old_x && New_index == Old_index && (!(New_index == New_arrListCount)) && (!(Old_arrListIndexOfX == New_arrListCount)) && (!(New_arrListIndexOfX == New_arrListCount)) && (!(Old_arrListLastIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount))))
+rounds: 3
+
+simplified post k == 0
+((New_arrListContainsX && New_arrListCount == Old_arrListCount && New_x == Old_x && New_index == Old_index && (!(New_index == New_arrListCount)) && (!(Old_arrListIndexOfX == New_arrListCount)) && (!(New_arrListIndexOfX == New_arrListCount)) && (!(Old_arrListLastIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount))))
+pex time: 62.78282403945923
+
+learn time: 5.214335203170776
+
+Samples: 14
+
+PUT: PUT_GetContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_arrListCount == Old_arrListCount && New_index == 0 && New_Ret == 0 && Old_index != Old_arrListCount && New_index != Old_arrListCount && New_Ret != Old_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount && New_Ret != New_arrListCount && New_index == Old_index && New_Ret == Old_index && New_Ret == New_index)
+
+unsimplified post:
+(New_arrListCount == Old_arrListCount && New_index == 0 && New_Ret == 0 && Old_index != Old_arrListCount && New_index != Old_arrListCount && New_Ret != Old_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount && New_Ret != New_arrListCount && New_index == Old_index && New_Ret == Old_index && New_Ret == New_index)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_arrListCount == Old_arrListCount && New_index == Old_index && Old_index != Old_arrListCount && New_index != Old_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount)
+
+unsimplified post:
+(New_arrListCount == Old_arrListCount && New_index == Old_index && Old_index != Old_arrListCount && New_index != Old_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount)
+
+===== Final Result for PUT_GetContract
+
+postcondition k == 0
+((New_arrListCount == Old_arrListCount && New_index == Old_index && (!(New_index == New_arrListCount))))
+rounds: 3
+
+simplified post k == 0
+((New_arrListCount == Old_arrListCount && New_index == Old_index && (!(New_index == New_arrListCount))))
+pex time: 31.81236696243286
+
+learn time: 3.28043794631958
+
+Samples: 8
+
+PUT: PUT_ContainsContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_arrListCount == Old_arrListCount && New_x == 0 && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_x == Old_x)
+
+unsimplified post:
+(New_arrListCount == Old_arrListCount && New_x == 0 && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_x == Old_x)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_arrListCount == Old_arrListCount && New_x == Old_x && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount)
+
+unsimplified post:
+(New_arrListCount == Old_arrListCount && New_x == Old_x && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount)
+
+===== Final Result for PUT_ContainsContract
+
+postcondition k == 0
+((New_arrListCount == Old_arrListCount && New_x == Old_x && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && (!(New_arrListIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount))))
+rounds: 3
+
+simplified post k == 0
+((New_arrListCount == Old_arrListCount && New_x == Old_x && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && (!(New_arrListIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount))))
+pex time: 73.5418758392334
+
+learn time: 6.616138219833374
+
+Samples: 13
+
+PUT: PUT_IndexOfContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_arrListCount == Old_arrListCount && New_x == 0 && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret == Old_arrListIndexOfX && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_Ret != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_x == Old_x && New_Ret == New_arrListIndexOfX)
+
+unsimplified post:
+(New_arrListCount == Old_arrListCount && New_x == 0 && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret == Old_arrListIndexOfX && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_Ret != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_x == Old_x && New_Ret == New_arrListIndexOfX)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_arrListCount == Old_arrListCount && New_x == Old_x && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret == Old_arrListIndexOfX && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_Ret != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_Ret == New_arrListIndexOfX)
+
+unsimplified post:
+(New_arrListCount == Old_arrListCount && New_x == Old_x && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret == Old_arrListIndexOfX && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_Ret != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_Ret == New_arrListIndexOfX)
+
+===== Final Result for PUT_IndexOfContract
+
+postcondition k == 0
+((New_arrListCount == Old_arrListCount && New_x == Old_x && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret == Old_arrListIndexOfX && (!(New_arrListLastIndexOfX == New_arrListCount)) && (!(New_Ret == New_arrListCount)) && New_Ret == New_arrListIndexOfX))
+rounds: 3
+
+simplified post k == 0
+((New_arrListCount == Old_arrListCount && New_x == Old_x && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret == Old_arrListIndexOfX && (!(New_arrListLastIndexOfX == New_arrListCount)) && (!(New_Ret == New_arrListCount)) && New_Ret == New_arrListIndexOfX))
+pex time: 65.71049475669861
+
+learn time: 7.727766513824463
+
+Samples: 13
+
+PUT: PUT_LastIndexOfContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_arrListCount == Old_arrListCount && New_x == Old_x && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret == Old_arrListLastIndexOfX && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_Ret != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_Ret == New_arrListLastIndexOfX)
+
+unsimplified post:
+(New_arrListCount == Old_arrListCount && New_x == Old_x && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret == Old_arrListLastIndexOfX && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_Ret != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_Ret == New_arrListLastIndexOfX)
+
+===== Final Result for PUT_LastIndexOfContract
+
+postcondition k == 0
+((New_arrListCount == Old_arrListCount && New_x == Old_x && New_arrListIndexOfX == Old_arrListIndexOfX && New_Ret == Old_arrListLastIndexOfX && (!(New_arrListIndexOfX == New_arrListCount)) && (!(New_Ret == New_arrListCount)) && New_Ret == New_arrListLastIndexOfX))
+rounds: 2
+
+simplified post k == 0
+((New_arrListCount == Old_arrListCount && New_x == Old_x && New_arrListIndexOfX == Old_arrListIndexOfX && New_Ret == Old_arrListLastIndexOfX && (!(New_arrListIndexOfX == New_arrListCount)) && (!(New_Ret == New_arrListCount)) && New_Ret == New_arrListLastIndexOfX))
+pex time: 87.09055852890015
+
+learn time: 6.122184991836548
+
+Samples: 8
+
+PUT: PUT_CountContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_arrListCount == Old_arrListCount && New_Ret == Old_arrListCount && New_Ret == New_arrListCount)
+
+unsimplified post:
+(New_arrListCount == Old_arrListCount && New_Ret == Old_arrListCount && New_Ret == New_arrListCount)
+
+===== Final Result for PUT_CountContract
+
+postcondition k == 0
+((New_Ret == Old_arrListCount && New_Ret == New_arrListCount))
+rounds: 2
+
+simplified post k == 0
+((New_Ret == Old_arrListCount && New_Ret == New_arrListCount))
+pex time: 43.758355140686035
+
+learn time: 4.2441442012786865
+
+Samples: 6
+
+Problem: UndirectedGraphTest
+
+PUT: PUT_AddEdgeContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ContainsEdgeSrcTar && New_ugVertexCount == Old_ugVertexCount && New_source == Old_source && New_target == Old_target && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_source != Old_ugVertexCount && New_source != Old_ugVertexCount && Old_target != Old_ugVertexCount && New_target != Old_ugVertexCount && Old_source != New_ugVertexCount && New_source != New_ugVertexCount && Old_target != New_ugVertexCount && New_target != New_ugVertexCount && Old_source != New_ugEdgeCount && New_source != New_ugEdgeCount && Old_target != New_ugEdgeCount && New_target != New_ugEdgeCount && Old_ugAdjacentDegreeTarget == Old_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget == New_ugAdjacentDegreeSource && Old_source != New_ugAdjacentDegreeSource && New_source != New_ugAdjacentDegreeSource && Old_target != New_ugAdjacentDegreeSource && New_target != New_ugAdjacentDegreeSource && Old_source != New_ugAdjacentDegreeTarget && New_source != New_ugAdjacentDegreeTarget && Old_target != New_ugAdjacentDegreeTarget && New_target != New_ugAdjacentDegreeTarget)
+
+unsimplified post:
+(Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ContainsEdgeSrcTar && New_ugVertexCount == Old_ugVertexCount && New_source == Old_source && New_target == Old_target && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_source != Old_ugVertexCount && New_source != Old_ugVertexCount && Old_target != Old_ugVertexCount && New_target != Old_ugVertexCount && Old_source != New_ugVertexCount && New_source != New_ugVertexCount && Old_target != New_ugVertexCount && New_target != New_ugVertexCount && Old_source != New_ugEdgeCount && New_source != New_ugEdgeCount && Old_target != New_ugEdgeCount && New_target != New_ugEdgeCount && Old_ugAdjacentDegreeTarget == Old_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget == New_ugAdjacentDegreeSource && Old_source != New_ugAdjacentDegreeSource && New_source != New_ugAdjacentDegreeSource && Old_target != New_ugAdjacentDegreeSource && New_target != New_ugAdjacentDegreeSource && Old_source != New_ugAdjacentDegreeTarget && New_source != New_ugAdjacentDegreeTarget && Old_target != New_ugAdjacentDegreeTarget && New_target != New_ugAdjacentDegreeTarget)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ContainsEdgeSrcTar && New_ugVertexCount == Old_ugVertexCount && New_source == Old_source && New_target == Old_target && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugAdjacentDegreeTarget == Old_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget == New_ugAdjacentDegreeSource)
+
+unsimplified post:
+(Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ContainsEdgeSrcTar && New_ugVertexCount == Old_ugVertexCount && New_source == Old_source && New_target == Old_target && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugAdjacentDegreeTarget == Old_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget == New_ugAdjacentDegreeSource)
+
+===== Final Result for PUT_AddEdgeContract
+
+postcondition k == 0
+((Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ContainsEdgeSrcTar && New_ugVertexCount == Old_ugVertexCount && New_source == Old_source && New_target == Old_target && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugAdjacentDegreeTarget ==       Old_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget ==       New_ugAdjacentDegreeSource))
+rounds: 3
+
+simplified post k == 0
+((Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ContainsEdgeSrcTar && New_ugVertexCount == Old_ugVertexCount && New_source == Old_source && New_target == Old_target && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugAdjacentDegreeTarget ==       Old_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget ==       New_ugAdjacentDegreeSource))
+pex time: 388.17213463783264
+
+learn time: 17.91276979446411
+
+Samples: 19
+
+PUT: PUT_RemoveEdgeContract
+
+=====
+Case: k == 0
+

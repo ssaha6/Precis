@@ -1,0 +1,247 @@
+Problem: BinaryHeapTest
+
+PUT: PUT_AddContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_bhCount == Old_bhCount + 1 && New_bhMinimumKey == 0 && New_bhMinimumValue == Old_value && New_prioirty == 0 && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount && Old_bhMinimumKey != New_bhCount && New_bhMinimumKey != New_bhCount && Old_bhMinimumValue != New_bhCount && New_bhMinimumValue != New_bhCount && Old_prioirty != New_bhCount && New_prioirty != New_bhCount && Old_value != New_bhCount && New_value != New_bhCount && New_bhMinimumKey == Newd_bhIndexOfValue && Old_prioirty == Newd_bhIndexOfValue && New_prioirty == Newd_bhIndexOfValue && Old_prioirty == New_bhMinimumKey && New_prioirty == New_bhMinimumKey && Old_value == New_bhMinimumValue && New_value == New_bhMinimumValue && New_prioirty == Old_prioirty)
+
+unsimplified post:
+(New_bhCount == Old_bhCount + 1 && New_bhMinimumKey == 0 && New_bhMinimumValue == Old_value && New_prioirty == 0 && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount && Old_bhMinimumKey != New_bhCount && New_bhMinimumKey != New_bhCount && Old_bhMinimumValue != New_bhCount && New_bhMinimumValue != New_bhCount && Old_prioirty != New_bhCount && New_prioirty != New_bhCount && Old_value != New_bhCount && New_value != New_bhCount && New_bhMinimumKey == Newd_bhIndexOfValue && Old_prioirty == Newd_bhIndexOfValue && New_prioirty == Newd_bhIndexOfValue && Old_prioirty == New_bhMinimumKey && New_prioirty == New_bhMinimumKey && Old_value == New_bhMinimumValue && New_value == New_bhMinimumValue && New_prioirty == Old_prioirty)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_bhCount == Old_bhCount + 1 && New_prioirty == Old_prioirty && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount)
+
+unsimplified post:
+(New_bhCount == Old_bhCount + 1 && New_prioirty == Old_prioirty && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount)
+
+===== Final Result for PUT_AddContract
+
+postcondition k == 0
+((New_bhCount == 1 + Old_bhCount && New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(Newd_bhIndexOfValue == New_bhCount))))
+rounds: 3
+
+simplified post k == 0
+((New_bhCount == 1 + Old_bhCount && New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(Newd_bhIndexOfValue == New_bhCount))))
+pex time: 79.62057280540466
+
+learn time: 7.959431409835815
+
+Samples: 27
+
+PUT: PUT_MinimumContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && Old_bhMinimumValue != Old_bhCount && New_bhMinimumValue != Old_bhCount && New_Ret_Value != Old_bhCount && Old_bhMinimumValue != New_bhCount && New_bhMinimumValue != New_bhCount && New_Ret_Value != New_bhCount && Old_bhMinimumValue != Old_bhCapacity && New_bhMinimumValue != Old_bhCapacity && New_Ret_Value != Old_bhCapacity && Old_bhMinimumValue != New_bhCapacity && New_bhMinimumValue != New_bhCapacity && New_Ret_Value != New_bhCapacity && New_Ret_Key == New_bhMinimumKey && New_Ret_Value == New_bhMinimumValue)
+
+unsimplified post:
+(New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && Old_bhMinimumValue != Old_bhCount && New_bhMinimumValue != Old_bhCount && New_Ret_Value != Old_bhCount && Old_bhMinimumValue != New_bhCount && New_bhMinimumValue != New_bhCount && New_Ret_Value != New_bhCount && Old_bhMinimumValue != Old_bhCapacity && New_bhMinimumValue != Old_bhCapacity && New_Ret_Value != Old_bhCapacity && Old_bhMinimumValue != New_bhCapacity && New_bhMinimumValue != New_bhCapacity && New_Ret_Value != New_bhCapacity && New_Ret_Key == New_bhMinimumKey && New_Ret_Value == New_bhMinimumValue)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_Ret_Key == New_bhMinimumKey && New_Ret_Value == New_bhMinimumValue)
+
+unsimplified post:
+(New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_Ret_Key == New_bhMinimumKey && New_Ret_Value == New_bhMinimumValue)
+
+===== Final Result for PUT_MinimumContract
+
+postcondition k == 0
+((New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_Ret_Key == New_bhMinimumKey && New_Ret_Value == New_bhMinimumValue))
+rounds: 3
+
+simplified post k == 0
+((New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_Ret_Key == New_bhMinimumKey && New_Ret_Value == New_bhMinimumValue))
+pex time: 39.22585129737854
+
+learn time: 6.249032735824585
+
+Samples: 16
+
+PUT: PUT_RemoveMinimumContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_bhCount == Old_bhCount - 1 && New_bhCapacity == Old_bhCapacity && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_bhCount != Old_bhCount && New_bhMinimumKey != Old_bhCount && Old_bhMinimumValue != Old_bhCount && New_bhMinimumValue != Old_bhCount && New_Ret_Value != Old_bhCount && Old_bhCapacity != New_bhCount && New_bhCapacity != New_bhCount && New_bhMinimumKey != Old_bhCapacity && Old_bhMinimumValue != Old_bhCapacity && New_bhMinimumValue != Old_bhCapacity && New_Ret_Value != Old_bhCapacity && New_bhMinimumKey != New_bhCapacity && Old_bhMinimumValue != New_bhCapacity && New_bhMinimumValue != New_bhCapacity && New_Ret_Value != New_bhCapacity)
+
+unsimplified post:
+(New_bhCount == Old_bhCount - 1 && New_bhCapacity == Old_bhCapacity && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_bhCount != Old_bhCount && New_bhMinimumKey != Old_bhCount && Old_bhMinimumValue != Old_bhCount && New_bhMinimumValue != Old_bhCount && New_Ret_Value != Old_bhCount && Old_bhCapacity != New_bhCount && New_bhCapacity != New_bhCount && New_bhMinimumKey != Old_bhCapacity && Old_bhMinimumValue != Old_bhCapacity && New_bhMinimumValue != Old_bhCapacity && New_Ret_Value != Old_bhCapacity && New_bhMinimumKey != New_bhCapacity && Old_bhMinimumValue != New_bhCapacity && New_bhMinimumValue != New_bhCapacity && New_Ret_Value != New_bhCapacity)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_bhCount == Old_bhCount - 1 && New_bhCapacity == Old_bhCapacity && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_bhCount != Old_bhCount && Old_bhCapacity != New_bhCount && New_bhCapacity != New_bhCount)
+
+unsimplified post:
+(New_bhCount == Old_bhCount - 1 && New_bhCapacity == Old_bhCapacity && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_bhCount != Old_bhCount && Old_bhCapacity != New_bhCount && New_bhCapacity != New_bhCount)
+
+===== Final Result for PUT_RemoveMinimumContract
+
+postcondition k == 0
+((New_bhCount == -1 + Old_bhCount && New_bhCapacity == Old_bhCapacity && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && (!(New_bhCapacity == New_bhCount))))
+rounds: 3
+
+simplified post k == 0
+((New_bhCount == -1 + Old_bhCount && New_bhCapacity == Old_bhCapacity && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && (!(New_bhCapacity == New_bhCount))))
+pex time: 259.19863057136536
+
+learn time: 9.048559665679932
+
+Samples: 38
+
+PUT: PUT_RemoveAtContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_bhCount == Old_bhCount - 1 && New_bhCapacity == Old_bhCapacity && New_index == Old_index && New_bhCount != Old_bhCount && New_bhMinimumKey != Old_bhCount && Old_bhMinimumValue != Old_bhCount && New_bhMinimumValue != Old_bhCount && Old_index != Old_bhCount && New_index != Old_bhCount && New_Ret_Value != Old_bhCount && Old_bhCapacity != New_bhCount && New_bhCapacity != New_bhCount && New_bhMinimumKey != Old_bhCapacity && Old_bhMinimumValue != Old_bhCapacity && New_bhMinimumValue != Old_bhCapacity && Old_index != Old_bhCapacity && New_index != Old_bhCapacity && New_Ret_Value != Old_bhCapacity && New_bhMinimumKey != New_bhCapacity && Old_bhMinimumValue != New_bhCapacity && New_bhMinimumValue != New_bhCapacity && Old_index != New_bhCapacity && New_index != New_bhCapacity && New_Ret_Value != New_bhCapacity)
+
+unsimplified post:
+(New_bhCount == Old_bhCount - 1 && New_bhCapacity == Old_bhCapacity && New_index == Old_index && New_bhCount != Old_bhCount && New_bhMinimumKey != Old_bhCount && Old_bhMinimumValue != Old_bhCount && New_bhMinimumValue != Old_bhCount && Old_index != Old_bhCount && New_index != Old_bhCount && New_Ret_Value != Old_bhCount && Old_bhCapacity != New_bhCount && New_bhCapacity != New_bhCount && New_bhMinimumKey != Old_bhCapacity && Old_bhMinimumValue != Old_bhCapacity && New_bhMinimumValue != Old_bhCapacity && Old_index != Old_bhCapacity && New_index != Old_bhCapacity && New_Ret_Value != Old_bhCapacity && New_bhMinimumKey != New_bhCapacity && Old_bhMinimumValue != New_bhCapacity && New_bhMinimumValue != New_bhCapacity && Old_index != New_bhCapacity && New_index != New_bhCapacity && New_Ret_Value != New_bhCapacity)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_bhCount == Old_bhCount - 1 && New_bhCapacity == Old_bhCapacity && New_index == Old_index && New_bhCount != Old_bhCount && Old_index != Old_bhCount && New_index != Old_bhCount && Old_bhCapacity != New_bhCount && New_bhCapacity != New_bhCount && Old_index != Old_bhCapacity && New_index != Old_bhCapacity && Old_index != New_bhCapacity && New_index != New_bhCapacity)
+
+unsimplified post:
+(New_bhCount == Old_bhCount - 1 && New_bhCapacity == Old_bhCapacity && New_index == Old_index && New_bhCount != Old_bhCount && Old_index != Old_bhCount && New_index != Old_bhCount && Old_bhCapacity != New_bhCount && New_bhCapacity != New_bhCount && Old_index != Old_bhCapacity && New_index != Old_bhCapacity && Old_index != New_bhCapacity && New_index != New_bhCapacity)
+
+===== Final Result for PUT_RemoveAtContract
+
+postcondition k == 0
+((New_bhCount == -1 + Old_bhCount && New_bhCapacity == Old_bhCapacity && New_index == Old_index && (!(New_index == Old_bhCount)) && (!(New_bhCapacity == New_bhCount)) && (!(New_index == New_bhCapacity))))
+rounds: 3
+
+simplified post k == 0
+((New_bhCount == -1 + Old_bhCount && New_bhCapacity == Old_bhCapacity && New_index == Old_index && (!(New_index == Old_bhCount)) && (!(New_bhCapacity == New_bhCount)) && (!(New_index == New_bhCapacity))))
+pex time: 322.02756667137146
+
+learn time: 15.440573453903198
+
+Samples: 47
+
+PUT: PUT_IndexOfContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_value == Old_value && New_Ret != Old_bhCount && New_Ret != New_bhCount && Old_bhMinimumValue != Old_bhCapacity && New_bhMinimumValue != Old_bhCapacity && Old_value != Old_bhCapacity && New_value != Old_bhCapacity && New_Ret != Old_bhCapacity && Old_bhMinimumValue != New_bhCapacity && New_bhMinimumValue != New_bhCapacity && Old_value != New_bhCapacity && New_value != New_bhCapacity && New_Ret != New_bhCapacity)
+
+unsimplified post:
+(New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_value == Old_value && New_Ret != Old_bhCount && New_Ret != New_bhCount && Old_bhMinimumValue != Old_bhCapacity && New_bhMinimumValue != Old_bhCapacity && Old_value != Old_bhCapacity && New_value != Old_bhCapacity && New_Ret != Old_bhCapacity && Old_bhMinimumValue != New_bhCapacity && New_bhMinimumValue != New_bhCapacity && Old_value != New_bhCapacity && New_value != New_bhCapacity && New_Ret != New_bhCapacity)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_value == Old_value && New_Ret != Old_bhCount && New_Ret != New_bhCount && New_Ret != Old_bhCapacity && New_Ret != New_bhCapacity)
+
+unsimplified post:
+(New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_value == Old_value && New_Ret != Old_bhCount && New_Ret != New_bhCount && New_Ret != Old_bhCapacity && New_Ret != New_bhCapacity)
+
+===== Final Result for PUT_IndexOfContract
+
+postcondition k == 0
+((New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_value == Old_value && (!(New_Ret == New_bhCount)) && (!(New_Ret == New_bhCapacity))))
+rounds: 3
+
+simplified post k == 0
+((New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_value == Old_value && (!(New_Ret == New_bhCount)) && (!(New_Ret == New_bhCapacity))))
+pex time: 54.51897120475769
+
+learn time: 8.993817567825317
+
+Samples: 26
+
+PUT: PUT_UpdateContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Newd_bhIndexOfValue != Old_bhCount && New_bhMinimumKey != Old_bhCount && Old_bhMinimumValue != Old_bhCount && New_bhMinimumValue != Old_bhCount && Old_prioirty != Old_bhCount && New_prioirty != Old_bhCount && Old_value != Old_bhCount && New_value != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount && New_bhMinimumKey != New_bhCount && Old_bhMinimumValue != New_bhCount && New_bhMinimumValue != New_bhCount && Old_prioirty != New_bhCount && New_prioirty != New_bhCount && Old_value != New_bhCount && New_value != New_bhCount && Old_bhIndexOfValue != Old_bhCapacity && Newd_bhIndexOfValue != Old_bhCapacity && New_bhMinimumKey != Old_bhCapacity && Old_bhMinimumValue != Old_bhCapacity && New_bhMinimumValue != Old_bhCapacity && Old_prioirty != Old_bhCapacity && New_prioirty != Old_bhCapacity && Old_value != Old_bhCapacity && New_value != Old_bhCapacity && Old_bhIndexOfValue != New_bhCapacity && Newd_bhIndexOfValue != New_bhCapacity && New_bhMinimumKey != New_bhCapacity && Old_bhMinimumValue != New_bhCapacity && New_bhMinimumValue != New_bhCapacity && Old_prioirty != New_bhCapacity && New_prioirty != New_bhCapacity && Old_value != New_bhCapacity && New_value != New_bhCapacity)
+
+unsimplified post:
+(New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Newd_bhIndexOfValue != Old_bhCount && New_bhMinimumKey != Old_bhCount && Old_bhMinimumValue != Old_bhCount && New_bhMinimumValue != Old_bhCount && Old_prioirty != Old_bhCount && New_prioirty != Old_bhCount && Old_value != Old_bhCount && New_value != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount && New_bhMinimumKey != New_bhCount && Old_bhMinimumValue != New_bhCount && New_bhMinimumValue != New_bhCount && Old_prioirty != New_bhCount && New_prioirty != New_bhCount && Old_value != New_bhCount && New_value != New_bhCount && Old_bhIndexOfValue != Old_bhCapacity && Newd_bhIndexOfValue != Old_bhCapacity && New_bhMinimumKey != Old_bhCapacity && Old_bhMinimumValue != Old_bhCapacity && New_bhMinimumValue != Old_bhCapacity && Old_prioirty != Old_bhCapacity && New_prioirty != Old_bhCapacity && Old_value != Old_bhCapacity && New_value != Old_bhCapacity && Old_bhIndexOfValue != New_bhCapacity && Newd_bhIndexOfValue != New_bhCapacity && New_bhMinimumKey != New_bhCapacity && Old_bhMinimumValue != New_bhCapacity && New_bhMinimumValue != New_bhCapacity && Old_prioirty != New_bhCapacity && New_prioirty != New_bhCapacity && Old_value != New_bhCapacity && New_value != New_bhCapacity)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Newd_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount && Old_bhIndexOfValue != Old_bhCapacity && Newd_bhIndexOfValue != Old_bhCapacity && Old_bhIndexOfValue != New_bhCapacity && Newd_bhIndexOfValue != New_bhCapacity)
+
+unsimplified post:
+(New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Newd_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount && Old_bhIndexOfValue != Old_bhCapacity && Newd_bhIndexOfValue != Old_bhCapacity && Old_bhIndexOfValue != New_bhCapacity && Newd_bhIndexOfValue != New_bhCapacity)
+
+===== Final Result for PUT_UpdateContract
+
+postcondition k == 0
+((New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == New_bhCount)) && (!(Newd_bhIndexOfValue == New_bhCount)) && (!(Old_bhIndexOfValue == New_bhCapacity)) && (!(Newd_bhIndexOfValue == New_bhCapacity))))
+rounds: 3
+
+simplified post k == 0
+((New_bhCount == Old_bhCount && New_bhCapacity == Old_bhCapacity && New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == New_bhCount)) && (!(Newd_bhIndexOfValue == New_bhCount)) && (!(Old_bhIndexOfValue == New_bhCapacity)) && (!(Newd_bhIndexOfValue == New_bhCapacity))))
+pex time: 372.6394290924072
+
+learn time: 18.54327154159546
+
+Samples: 47
+
+PUT: PUT_MinimumUpdateContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount && New_bhMinimumKey != New_bhCount && Old_bhMinimumValue != New_bhCount && New_bhMinimumValue != New_bhCount && Old_value != New_bhCount && New_value != New_bhCount && Old_bhIndexOfValue != Old_bhCapacity && New_bhMinimumKey != Old_bhCapacity && Old_bhMinimumValue != Old_bhCapacity && New_bhMinimumValue != Old_bhCapacity && Old_value != Old_bhCapacity && New_value != Old_bhCapacity && Old_bhIndexOfValue != New_bhCapacity && Newd_bhIndexOfValue != New_bhCapacity && New_bhMinimumKey != New_bhCapacity && Old_bhMinimumValue != New_bhCapacity && New_bhMinimumValue != New_bhCapacity && Old_value != New_bhCapacity && New_value != New_bhCapacity)
+
+unsimplified post:
+(New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount && New_bhMinimumKey != New_bhCount && Old_bhMinimumValue != New_bhCount && New_bhMinimumValue != New_bhCount && Old_value != New_bhCount && New_value != New_bhCount && Old_bhIndexOfValue != Old_bhCapacity && New_bhMinimumKey != Old_bhCapacity && Old_bhMinimumValue != Old_bhCapacity && New_bhMinimumValue != Old_bhCapacity && Old_value != Old_bhCapacity && New_value != Old_bhCapacity && Old_bhIndexOfValue != New_bhCapacity && Newd_bhIndexOfValue != New_bhCapacity && New_bhMinimumKey != New_bhCapacity && Old_bhMinimumValue != New_bhCapacity && New_bhMinimumValue != New_bhCapacity && Old_value != New_bhCapacity && New_value != New_bhCapacity)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount && Old_bhIndexOfValue != Old_bhCapacity && Old_bhIndexOfValue != New_bhCapacity && Newd_bhIndexOfValue != New_bhCapacity)
+
+unsimplified post:
+(New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount && Old_bhIndexOfValue != Old_bhCapacity && Old_bhIndexOfValue != New_bhCapacity && Newd_bhIndexOfValue != New_bhCapacity)
+
+===== Final Result for PUT_MinimumUpdateContract
+
+postcondition k == 0
+((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(Newd_bhIndexOfValue == New_bhCount)) && (!(Old_bhIndexOfValue == Old_bhCapacity)) && (!(Old_bhIndexOfValue == New_bhCapacity)) && (!(Newd_bhIndexOfValue == New_bhCapacity))))
+rounds: 3
+
+simplified post k == 0
+((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(Newd_bhIndexOfValue == New_bhCount)) && (!(Old_bhIndexOfValue == Old_bhCapacity)) && (!(Old_bhIndexOfValue == New_bhCapacity)) && (!(Newd_bhIndexOfValue == New_bhCapacity))))
+pex time: 309.18281412124634
+
+learn time: 35.30897116661072
+
+Samples: 63
+
